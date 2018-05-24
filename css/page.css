@@ -1,0 +1,24 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    font: 16px Arial, sans-serif;
+    padding-bottom: 150px;
+}
+
+header {
+    height: 15%;
+}
+
+main {
+    min-height: 100%;
+    overflow: auto;
+}
+
+footer
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+}
