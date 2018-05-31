@@ -1,5 +1,6 @@
 $(function () {
   callPage("pages/home.html");
+  document.getElementById('copyrightYear').innerHTML = 'Copyright &copy; ' + new Date().getFullYear();
 });
 
 $('ul.navbar-nav li.dropdown').hover(function () {
@@ -23,11 +24,12 @@ function callPage(pageRef, specific) {
     type: "GET",
     dataType: "text",
     success: function (response) {
-      console.log('the page was loaded', response);
+      //console.log('the page was loaded', response);
       $('#main').html(response);
       if (specific !== "") {
+        console.log(specific);
         $('html, #main').animate({
-          scrollTop: $(specific).offset().top
+          scrollTop: $(specific).offset().top - $('.header').height()
         }, 2000);
       }
     },
