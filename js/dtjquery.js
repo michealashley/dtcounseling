@@ -11,9 +11,11 @@ $('ul.navbar-nav li.dropdown').hover(function () {
 
 $("a").on("click", function (e) {
   e.preventDefault();
-  var url = $(this).attr('href');
-  var divStopIndex = url.indexOf('#');
-  var divStop = (divStopIndex !== -1) ? url.substring(divStopIndex, url.length) : "";
+  e.stopPropagation();
+  let url, divStop = "";
+  url = $(this).attr('href');
+  let divStopIndex = url.indexOf('#');
+  divStop = (divStopIndex !== -1) ? url.substring(divStopIndex, url.length) : "";
   console.log(divStop);
   callPage(url, divStop);
 });
@@ -26,18 +28,17 @@ function callPage(pageRef, specific) {
     success: function (response) {
       //console.log('the page was loaded', response);
       $('#main').html(response);
-      if (specific !== "") {
-        console.log(specific);
-        $('html, #main').animate({
-          scrollTop: $(specific).offset().top - $('.header').height()
-        }, 2000);
-      }
     },
     error: function (error) {
       console.log(error);
     },
     complete: function (xhr, status) {
       console.log("The request is complete!");
+      if (specific !== "") {
+        $('html, #main').animate({
+          scrollTop: $(''+specific).offset().top - $('.header').height()
+        }, 2000);
+      };
     }
   });
 }

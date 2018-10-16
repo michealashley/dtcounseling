@@ -2,12 +2,39 @@ html, body {
     height: 100%;
     font: 16px Arial, sans-serif;
     margin: 0;
+    background-color: #1d4e89;
 }
 
-.wrapper {
-    height: 100%;
+header {
+    height: 5%;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar {
+    width: -webkit-calc(100% - 59px);
+    width: -moz-calc(100% - 59px);
+    width: calc(100% - 59px);
+    height: 2%;
+    background-color: #858585;
+}
+
+#steps {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
 }
 
 #main {
-    overflow: auto;
+    flex: 1 1 auto;
+    background-color: #FFF;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+header, footer {
+    padding: 1px;
+    flex: 0 0 auto;
 }
