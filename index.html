@@ -1,17 +1,16 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>David Tsveer | MA</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/page.css" rel="stylesheet" />
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>David Tsveer | MA</title>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/page.css" rel="stylesheet" />
+    </head>
 
-<body>
-    <div class="wrapper d-flex flex-column">
-        <header class="header">
+    <body>
+        <header class="header d-flex flex-column">
             <div class="d-flex flex-row justify-content-md-between">
                 <div class="p-2">
                     <a class="navbar-brand" href="pages/home.html">David Tsveer, MA, RIC, NCC</a>
@@ -27,7 +26,9 @@
                     <a href="email:tsveerd@gmail.com">tsveerd@gmail.com</a>
                 </div>
             </div>
+        </header>
 
+        <div class="wrapper d-flex flex-column">
             <div class="d-flex flex-row">
                 <nav class="navbar navbar-expand-lg hidden-phone navbar-light mx-auto">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -61,67 +62,64 @@
                     </div>
                 </nav>
             </div>
-        </header>
 
-        <main id="main" class="p-2"></main>
-
-        <footer class="footer">
-            <div class="d-flex justify-content-center">
-                <div class="p-2">
-                    <div class="p-2 float-left">
-                        <a href="pages/home.html">Home</a>
-                        <br>
-                        <a href="pages/about.html">About Me</a>
-                        <br />
-                        <a href="pages/services.html">Services and Fees</a>
+            <footer class="footer">
+                    <div class="d-flex justify-content-center">
+                        <div class="p-2 flex-fill">
+                            <div class="p-2 float-left">
+                                <a href="pages/home.html">Home</a>
+                                <br>
+                                <a href="pages/about.html">About Me</a>
+                                <br />
+                                <a href="pages/services.html">Services and Fees</a>
+                            </div>
+                            <div class="p-2 float-left">
+                                <a href="pages/services.html#intake">Intake</a>
+                                <br>
+                                <a href="pages/services.html#ind">Individual</a>
+                                <br>
+                                <a href="pages/services.html#group">Group</a>
+                                <br>
+                                <a href="pages/services.html#fam">Family</a>
+                                <br>
+                                <!--<a href="pages/services#psyched">Psych Education</a>-->
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            Located At:
+                            <br>
+                            <p>New Directions Counseling Group
+                                <br /> 150 S. Washington St., Suite 303
+                                <br /> Falls Church, VA 22046</p>
+                        </div>
+                        <div class="p-2">
+                            Contact Me
+                            <br>
+                            <a href="tel:5714066796">571-406-4796</a>
+                            <br />
+                            <a href="email:tsveerd@gmail.com">tsveerd@gmail.com</a>
+                        </div>
                     </div>
-                    <div class="p-2 float-left">
-                        <a href="pages/services.html#intake">Intake</a>
-                        <br>
-                        <a href="pages/services.html#ind">Individual</a>
-                        <br>
-                        <a href="pages/services.html#group">Group</a>
-                        <br>
-                        <a href="pages/services.html#fam">Family</a>
-                        <br>
-                        <!--<a href="pages/services#psyched">Psych Education</a>-->
+                    <div class="d-flex justify-content-center">
+                        <form action="http://maps.google.com/maps" method="get" target="_blank" autocomplete="off">
+                            Enter your starting address:
+                            <br>
+                            <input typr="text" name="saddr" />
+                            <input type="hidden" name="daddr" value="150 S. Washington St., Falls Church, VA" />
+                            <input type="submit" value="get directions" />
+                        </form>
                     </div>
-                </div>
-                <div class="p-2 flex-grow-1">
-                    Located At:
-                    <br>
-                    <p>New Directions Counseling Group
-                        <br /> 150 S. Washington St., Suite 303
-                        <br /> Falls Church, VA 22046</p>
-                </div>
-                <div class="p-2">
-                    Contact Me
-                    <br>
-                    <a href="tel:5714066796">571-406-4796</a>
-                    <br />
-                    <a href="email:tsveerd@gmail.com">tsveerd@gmail.com</a>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <form action="http://maps.google.com/maps" method="get" target="_blank" autocomplete="off">
-                    Enter your starting address:
-                    <br>
-                    <input typr="text" name="saddr" />
-                    <input type="hidden" name="daddr" value="150 S. Washington St., Falls Church, VA" />
-                    <input type="submit" value="get directions" />
-                </form>
-            </div>
-            <div class="d-flex justify-content-center">
-                <span id="copyrightYear"></span>
-            </div>
-        </footer>
+                    <div class="d-flex justify-content-center">
+                        <span id="copyrightYear"></span>
+                    </div>
+                </footer>
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/dtjquery.js"></script>
-</body>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/dtjquery.js"></script>
+    </body>
 
 </html>
