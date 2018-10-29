@@ -39,6 +39,11 @@ header a:hover, footer a:hover {
     background-color: #858585;
 }
 
+.active {
+    background-color: #997171;
+    font-weight: bold;
+}
+
 #steps {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;

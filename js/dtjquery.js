@@ -9,6 +9,11 @@ $('ul.navbar-nav li.dropdown').hover(function () {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
 
+$('ul.navbar-nav .nav-item a').on('click', function() {
+  $('.nav-item').removeClass('active');
+  $(this).closest('.nav-item').addClass('active');
+})
+
 $("a").on("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
