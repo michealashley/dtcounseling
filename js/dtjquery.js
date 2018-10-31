@@ -1,5 +1,5 @@
 $(function () {
-  callPage("pages/home.html");
+  callPage("pages/home.html", "", "home");
   document.getElementById('copyrightYear').innerHTML = 'Copyright &copy; ' + new Date().getFullYear();
 });
 
@@ -9,23 +9,20 @@ $('ul.navbar-nav li.dropdown').hover(function () {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
 
-$('ul.navbar-nav .nav-item a').on('click', function() {
-  $('.nav-item').removeClass('active');
-  $(this).closest('.nav-item').addClass('active');
-})
-
 $("a").on("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
-  let url, divStop = "";
+  let url, divStop, idStop = "";
+  window.scrollTo(0, 0);
   url = $(this).attr('href');
+  idStop = url.substring((url.indexOf('/') + 1), url.indexOf('.'));
   let divStopIndex = url.indexOf('#');
   divStop = (divStopIndex !== -1) ? url.substring(divStopIndex, url.length) : "";
   console.log(divStop);
-  callPage(url, divStop);
+  callPage(url, divStop, idStop);
 });
 
-function callPage(pageRef, specific) {
+function callPage(pageRef, specific, id) {
   $.ajax({
     url: pageRef,
     type: "GET",
@@ -39,10 +36,11 @@ function callPage(pageRef, specific) {
     },
     complete: function (xhr, status) {
       console.log("The request is complete!");
-      if (specific !== "") {
+      $('.nav-item').removeClass('active');
+      $('#' + id).closest('.nav-item').addClass('active');
+      if (specific !== undefined && specific.length > 0) {
         $('html, #main').animate({
-          scrollTop: $(''+specific).offset().top - $('.header').height()
-        }, 2000);
+          scrollTop: $(''+specific).offset().top}, 1000);
       };
     }
   });
