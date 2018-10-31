@@ -9,7 +9,7 @@ $('ul.navbar-nav li.dropdown').hover(function () {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
 
-$("a").on("click", function (e) {
+$(".navi").on("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
   let url, divStop, idStop = "";

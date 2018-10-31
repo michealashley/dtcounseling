@@ -19,6 +19,35 @@ header a:hover, footer a:hover {
     color: #91FDFF;
 }
 
+a[href^="tel"]:link,
+a[href^="tel"]:visited, 
+a[href^="tel"]:hover {
+    text-decoration: none;
+    color: #000;
+
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Adjust px here (1024px for tablets maybe) */
+@media only screen and (max-width: 480px) { 
+    a[href^="tel"]:link,
+    a[href^="tel"]:visited{
+        text-decoration: underline;
+        color: #DCFF11;
+
+        pointer-events: visible;
+        cursor: pointer;
+    }
+    a[href^="tel"]:hover {
+        text-decoration: underline;
+        color: #91FDFF;
+
+        pointer-events: visible;
+        cursor: pointer;
+    }
+}
+
 #phrase {
     font-weight: bold;
     font-style: italic;
